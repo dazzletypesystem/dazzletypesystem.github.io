@@ -13,6 +13,7 @@ function setup() {
 
 function draw() {
   background(255);
+  image(img, 0, 0, 320, 240);
 
   for (var x = 0; x < img.width; x++) {
     for (var y = 0; y < img.height; y++ ) {
