@@ -1,19 +1,20 @@
 var img;
-var img2;
 
 function setup() {
   createCanvas(390, 240);
   img = createCapture(VIDEO);
-  img2 = createImage(320, 240);
   img.size(320, 240);
   //capture.hide();
 
   pixelDensity(1);
-  img2.loadPixels();
-  loadPixels();
+
 }
 
 function draw() {
+
+  img.loadPixels();
+  loadPixels();
+
   background(255);
   image(img2, 0, 0, 320, 240);
 
