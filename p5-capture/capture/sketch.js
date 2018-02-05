@@ -2,21 +2,19 @@ var img;
 
 function setup() {
   createCanvas(390, 240);
+  pixelDensity(1);
   img = createCapture(VIDEO);
   img.size(320, 240);
   //capture.hide();
-
-  pixelDensity(1);
-
 }
 
 function draw() {
-
+  background(255);
   img.loadPixels();
   loadPixels();
 
-  background(255);
-  image(img2, 0, 0, 320, 240);
+
+  //image(img2, 0, 0, 320, 240);
 
   for (var x = 0; x < img.width; x++) {
     for (var y = 0; y < img.height; y++ ) {
@@ -41,8 +39,8 @@ function draw() {
 
       var pixloc = (y*width + x)*4;
       pixels[pixloc] = r;
-      pixels[pixloc+1] = map(mouseX,0,width,0,255);
-      pixels[pixloc+2] = map(mouseX,0,width,0,255);
+      pixels[pixloc+1] = g;
+      pixels[pixloc+2] = b;
       pixels[pixloc+3] = 255;
     }
   }
