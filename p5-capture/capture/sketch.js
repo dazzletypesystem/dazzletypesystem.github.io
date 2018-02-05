@@ -5,7 +5,7 @@ function setup() {
   pixelDensity(1);
   img = createCapture(VIDEO);
   img.size(320, 240);
-  //capture.hide();
+  capture.hide();
 }
 
 function draw() {
@@ -14,7 +14,7 @@ function draw() {
   loadPixels();
 
 
-  image(img, 100, 0, 320, 240);
+
 
   for (var x = 0; x < img.width; x++) {
     for (var y = 0; y < img.height; y++ ) {
@@ -45,4 +45,6 @@ function draw() {
     }
   }
   updatePixels();
+
+  image(img, 100, 0, 320, 240);
 }
