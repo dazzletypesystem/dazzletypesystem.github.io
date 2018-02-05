@@ -38,7 +38,7 @@ function draw() {
 
 
       var pixloc = (y*width + x)*4;
-      pixels[pixloc] = r;
+      pixels[pixloc] = 255;
       pixels[pixloc+1] = g;
       pixels[pixloc+2] = b;
       pixels[pixloc+3] = 255;
