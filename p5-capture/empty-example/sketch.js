@@ -1,5 +1,6 @@
-function setup() {
-  var div = createDiv('this is the child');
+  var div;
+  function setup() {
+ div= createDiv('this is the child');
   
 }
 
