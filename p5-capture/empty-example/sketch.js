@@ -20,7 +20,8 @@ navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 	video.srcObject = stream;
 });
 
-document.body.appendChild(video);
+var elt = document.getElementById('myDiv');
+elt.appendChild(video);
 
 video.addEventListener('click', function() {
   if (facingMode == "user") {
