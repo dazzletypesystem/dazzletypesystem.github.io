@@ -1,21 +1,19 @@
 var img;
 
 function setup() {
-  createCanvas(390, 240);
+  createCanvas(390*2, 240*2);
   pixelDensity(1);
+  //colorMode(HSB, 100);
   img = createCapture(VIDEO);
-  img.size(320, 240);
-  capture.hide();
+  img.size(320*2, 240*2);
+  img.hide();
 }
 
 function draw() {
   background(255);
   img.loadPixels();
   loadPixels();
-
-
-
-
+  
   for (var x = 0; x < img.width; x++) {
     for (var y = 0; y < img.height; y++ ) {
       // Calculate the 1D location from a 2D grid
@@ -25,6 +23,8 @@ function draw() {
       r = img.pixels[loc];
       g = img.pixels[loc+1];
       b = img.pixels[loc+2];
+      
+      var c = color(r,g,b);
 
 /*      // Calculate an amount to change brightness based on proximity to the mouse
       var maxdist = 50;
@@ -38,13 +38,14 @@ function draw() {
 
 
       var pixloc = (y*width + x)*4;
-      pixels[pixloc] = 255;
-      pixels[pixloc+1] = map(mouseX,0,width,0,255);
-      pixels[pixloc+2] = b;
+      pixels[pixloc] = saturation(c);
+      pixels[pixloc+1] = 255;
+      pixels[pixloc+2] = 255;
       pixels[pixloc+3] = 255;
     }
   }
   updatePixels();
-
-  image(img, 100, 0, 320, 240);
+  
+  //image(img, 0, 0, 920, 240);
+  
 }
