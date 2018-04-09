@@ -1,5 +1,6 @@
-  var div;
-  function setup() {
+var div;
+  
+function setup() {
  div= createDiv('this is the child');
   
 }
@@ -30,7 +31,8 @@ navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 	video.srcObject = stream;
 });
 
-div.appendChild(video);
+var elt = document.getElementById('myDiv');
+elt.appendChild(video);
 
 video.addEventListener('click', function() {
   if (facingMode == "user") {
