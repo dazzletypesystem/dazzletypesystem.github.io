@@ -21,7 +21,7 @@ navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 });
 
 var elt = document.getElementById('myDiv');
-elt.appendChild(video);
+body.appendChild(video);
 
 video.addEventListener('click', function() {
   if (facingMode == "user") {
