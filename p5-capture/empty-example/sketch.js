@@ -1,15 +1,5 @@
-var div;
-  
 function setup() {
- div= createDiv('this is the child');
-  
-}
-
-function draw() {
-  
-}
-
-navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+ navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
 var video = document.createElement('video');
 video.style.width =  document.width + 'px';
@@ -32,7 +22,7 @@ navigator.mediaDevices.getUserMedia(constraints).then(function success(stream) {
 });
 
 var elt = document.getElementById('myDiv');
-elt.appendChild(video);
+elt.child(video);
 
 video.addEventListener('click', function() {
   if (facingMode == "user") {
@@ -52,3 +42,11 @@ video.addEventListener('click', function() {
 	  video.srcObject = stream;	
   });
 });
+  
+}
+
+function draw() {
+  
+}
+
+
