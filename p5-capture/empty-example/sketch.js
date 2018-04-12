@@ -4,6 +4,7 @@ var cane;
    var v = document.getElementById('ciao');
    cane =createCanvas(480,360);
   cane.id('c');
+  cane.position(0,0);
   var can = document.getElementById('c');
   
   var context = can.getContext('2d');
