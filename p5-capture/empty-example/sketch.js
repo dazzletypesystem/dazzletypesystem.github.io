@@ -1,4 +1,4 @@
-var cane, can,back,backcontext;
+var cane, can,back,backcontext,v;
 var img;
 
  function setup(){
@@ -11,7 +11,7 @@ var img;
   cane.id('c');
   cane.position(0,0);
   
-  var v = document.getElementById('ciao');
+  v = document.getElementById('ciao');
   can = document.getElementById('c');
   
   var context = can.getContext('2d');
@@ -66,11 +66,11 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   
-  img.copy(backcontext,0, 0, width, height, 0, 0, width, height);
+  img.copy(v,0, 0, width, height, 0, 0, width, height);
 
   //saveCanvas(cane, 'myCanvas', 'jpg');
 }
 
 function touchEnded() {
-  img.copy(backcontext,0, 0, width, height, 0, 0, width, height);
+  img.copy(v,0, 0, width, height, 0, 0, width, height);
 }
