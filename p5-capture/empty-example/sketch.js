@@ -1,7 +1,8 @@
+var cane;
 
  function setup(){
    var v = document.getElementById('ciao');
-   var cane =createCanvas(480,360);
+   cane =createCanvas(480,360);
   cane.id('c');
   var can = document.getElementById('c');
   
