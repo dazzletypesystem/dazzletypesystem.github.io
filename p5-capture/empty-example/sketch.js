@@ -2,8 +2,9 @@
  
  function setup(){
    var v = document.getElementById('ciao');
-   	var can =createCanvas(480,360);
-  can.id=('c');
+   	/*var can =createCanvas(480,360);
+  can.id=('c');*/
+  var can = document.getElementById('c');
   
   var context = can.getContext('2d');
 	var back = document.createElement('canvas');
@@ -24,7 +25,7 @@
  
 document.addEventListener('DOMContentLoaded', function(){
 	
-	//var canvas = document.getElementById('c');
+	//
 
 },false);
  
