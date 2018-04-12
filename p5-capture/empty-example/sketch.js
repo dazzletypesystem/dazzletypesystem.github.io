@@ -1,12 +1,7 @@
  var canvas;
  
  function setup(){
-   
- }
- 
-document.addEventListener('DOMContentLoaded', function(){
-	
-	var v = document.getElementById('ciao');
+   var v = document.getElementById('ciao');
    	/*var can =createCanvas(480,360);
   can.id=('c');*/
   var can = document.getElementById('c');
@@ -26,6 +21,11 @@ document.addEventListener('DOMContentLoaded', function(){
 		back.height = ch;
 		drawF(v,context,backcontext,cw,ch);
 	},false);
+ }
+ 
+document.addEventListener('DOMContentLoaded', function(){
+	
+	
 
 },false);
  
@@ -50,7 +50,7 @@ function drawF(v,c,bc,w,h) {
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
 	// Start over!
-	setTimeout(draw,20,v,c,bc,w,h);
+	setTimeout(drawF,20,v,c,bc,w,h);
 }
 
 function mouseClicked() {
