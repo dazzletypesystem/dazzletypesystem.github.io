@@ -1,16 +1,15 @@
- /*var canvas;
+ var canvas;
  
  function setup(){
-   cc=createCanvas(480,360);
-   cc.id=('c');
+   	var canvas =createCanvas(480,360);
+  canvas.id=('c');
    
- }*/
+ }
 document.addEventListener('DOMContentLoaded', function(){
 	var v = document.getElementById('ciao');
 	//var canvas = document.getElementById('c');
 	
-	var canvas =createCanvas(480,360);
-  canvas.id=('c');
+
    
 	var context = canvas.getContext('2d');
 	var back = document.createElement('canvas');
