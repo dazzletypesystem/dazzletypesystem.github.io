@@ -1,10 +1,10 @@
- var canvas;
+ /*var canvas;
  
  function setup(){
    cc=createCanvas(480,360);
    cc.id=('c');
    
- }
+ }*/
 document.addEventListener('DOMContentLoaded', function(){
 	var v = document.getElementById('ciao');
 	var canvas = document.getElementById('c');
