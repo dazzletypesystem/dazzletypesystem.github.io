@@ -1,7 +1,12 @@
  var canvas;
  
  function setup(){
-   var v = document.getElementById('ciao');
+   
+ }
+ 
+document.addEventListener('DOMContentLoaded', function(){
+	
+	var v = document.getElementById('ciao');
    	/*var can =createCanvas(480,360);
   can.id=('c');*/
   var can = document.getElementById('c');
@@ -21,11 +26,6 @@
 		back.height = ch;
 		drawF(v,context,backcontext,cw,ch);
 	},false);
- }
- 
-document.addEventListener('DOMContentLoaded', function(){
-	
-	//
 
 },false);
  
