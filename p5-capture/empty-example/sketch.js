@@ -1,8 +1,8 @@
  var canvas;
  
  function setup(){
-   canvas=createCanvas(480,360);
-   canvas.id=("c");
+   cc=createCanvas(480,360);
+   cc.id=("c");
    
  }
 document.addEventListener('DOMContentLoaded', function(){
