@@ -2,7 +2,7 @@ var cane;
 var img;
 
  function setup(){
-   
+   pixelDensity(1);
    cane =createCanvas(480,360);
    img = createImage(width,height);
    
@@ -65,7 +65,7 @@ function drawF(v,c,bc,w,h) {
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
 	
-	copy(0, 0, width, height, 0, 0, 100, 100);
+	//copy(0, 0, width, height, 0, 0, 100, 100);
 	image(img,0,0,200,200);
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
@@ -73,15 +73,7 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   
-  //img.copy(0, 0, width, height, 0, 0, width, height);
-  
-  loadPixels();
-  for(var x = 0; x < img.width; x++) {
-    for(var y = 0; y < img.height; y++) {
-      var a = map(y, 0, img.height, 255, 0);
-      img.set(x, y, [0, 0, 0, 255]); 
-    }
-  }
-  img.updatePixels();
+  img.copy(cane,0, 0, width, height, 0, 0, width, height);
+
   //saveCanvas(cane, 'myCanvas', 'jpg');
 }
