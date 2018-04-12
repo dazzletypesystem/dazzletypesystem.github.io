@@ -77,7 +77,7 @@ function mouseClicked() {
   for(var x = 0; x < img.width; x++) {
     for(var y = 0; y < img.height; y++) {
       var a = map(y, 0, img.height, 255, 0);
-      img.set(x, y, [0, 0, 0, a]); 
+      img.set(x, y, [0, 0, 0, 255]); 
     }
   }
   img.updatePixels();
