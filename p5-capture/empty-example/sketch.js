@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', function(){
 		back.width = cw;
 		back.height = ch;
 		draw(v,context,backcontext,cw,ch);
+		
+		draw(v,context,backcontext,cw,ch);
 	},false);
  
 },false);
@@ -30,7 +32,7 @@ function draw(v,c,bc,w,h) {
 	if(v.paused || v.ended)	return false;
 	// First, draw it into the backing canvas
 	bc.drawImage(v,0,0,w,h);
-	// Grab the pixel data from the backing canvas
+	/*// Grab the pixel data from the backing canvas
 	var idata = bc.getImageData(0,0,w,h);
 	var data = idata.data;
 	// Loop through the pixels, turning them grayscale
@@ -45,7 +47,7 @@ function draw(v,c,bc,w,h) {
 	}
 	idata.data = data;
 	// Draw the pixels onto the visible canvas
-	c.putImageData(idata,0,0);
+	c.putImageData(idata,0,0);*/
 	// Start over!
 	setTimeout(draw,20,v,c,bc,w,h);
 }
