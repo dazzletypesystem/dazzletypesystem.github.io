@@ -1,25 +1,18 @@
-var cane;
+var cane, can;
 var img;
 
  function setup(){
    pixelDensity(1);
-   cane =createCanvas(480,360);
+   cane =createCanvas(480*2,360*2);
    img = createImage(width,height);
    
- /*  img.loadPixels();
-  for(var x = 0; x < img.width; x++) {
-    for(var y = 0; y < img.height; y++) {
-      var a = map(y, 0, img.height, 255, 0);
-      img.set(x, y, [0, 153, 204, a]); 
-    }
-  }
-  img.updatePixels();*/
+   
   
   cane.id('c');
   cane.position(0,0);
   
   var v = document.getElementById('ciao');
-  var can = document.getElementById('c');
+  can = document.getElementById('c');
   
   var context = can.getContext('2d');
 	var back = document.createElement('canvas');
@@ -73,11 +66,11 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   
-  img.copy(cane,0, 0, width, height, 0, 0, width, height);
+  img.copy(can,0, 0, width, height, 0, 0, width, height);
 
   //saveCanvas(cane, 'myCanvas', 'jpg');
 }
 
 function touchEnded() {
-  img.copy(cane,0, 0, width, height, 0, 0, width, height);
+  img.copy(can,0, 0, width, height, 0, 0, width, height);
 }
