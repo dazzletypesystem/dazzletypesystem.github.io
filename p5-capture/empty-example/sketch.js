@@ -2,6 +2,7 @@
  
  function setup(){
    canvas=createCanvas(480,360);
+   canvas.id="c";
    
  }
 document.addEventListener('DOMContentLoaded', function(){
