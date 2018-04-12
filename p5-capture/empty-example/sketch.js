@@ -1,7 +1,12 @@
+ var canvas;
  
+ function setup(){
+   canvas=createCanvas(200,200);
+   
+ }
 document.addEventListener('DOMContentLoaded', function(){
 	var v = document.getElementById('ciao');
-	var canvas = document.getElementById('c');
+	//var canvas = document.getElementById('c');
 	var context = canvas.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
@@ -45,5 +50,6 @@ function draw(v,c,bc,w,h) {
 }
 
 function mouseClicked() {
+  //var img = createImage();
   saveCanvas(canvas, 'myCanvas', 'jpg');
 }
