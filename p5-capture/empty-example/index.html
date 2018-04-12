@@ -34,6 +34,7 @@ video{
       navigator.getUserMedia  = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
 
 var video = document.createElement('video');
+video.id="ciao";
 video.style.width =  document.width + 'px';
 video.style.height = document.height + 'px';
 video.setAttribute('autoplay', '');
