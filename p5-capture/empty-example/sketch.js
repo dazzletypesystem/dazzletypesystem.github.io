@@ -1,12 +1,11 @@
- var canvas;
- 
+
  function setup(){
    var v = document.getElementById('ciao');
-   canvas =createCanvas(480,360);
-   canvas.id('c');
-  //var can = document.getElementById('c');
+   var cane =createCanvas(480,360);
+  cane.id('c');
+  var can = document.getElementById('c');
   
-  var context = canvas.getContext('2d');
+  var context = can.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
  
@@ -55,5 +54,5 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   //var img = createImage();
-  saveCanvas(can, 'myCanvas', 'jpg');
+  saveCanvas(cane, 'myCanvas', 'jpg');
 }
