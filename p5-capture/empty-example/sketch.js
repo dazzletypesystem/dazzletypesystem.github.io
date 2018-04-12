@@ -6,14 +6,14 @@ var img;
    cane =createCanvas(480,360);
    img = createImage(width,height);
    
-   img.loadPixels();
+ /*  img.loadPixels();
   for(var x = 0; x < img.width; x++) {
     for(var y = 0; y < img.height; y++) {
       var a = map(y, 0, img.height, 255, 0);
       img.set(x, y, [0, 153, 204, a]); 
     }
   }
-  img.updatePixels();
+  img.updatePixels();*/
   
   cane.id('c');
   cane.position(0,0);
