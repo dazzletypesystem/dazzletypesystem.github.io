@@ -59,7 +59,7 @@ function drawF(v,c,bc,w,h) {
 	c.putImageData(idata,0,0);
 	
 	//copy(0, 0, width, height, 0, 0, 100, 100);
-	image(bc,0,0,200,200);
+	image(img,0,0,200,200);
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
 }
