@@ -7,7 +7,11 @@
  }*/
 document.addEventListener('DOMContentLoaded', function(){
 	var v = document.getElementById('ciao');
-	var canvas = document.getElementById('c');
+	//var canvas = document.getElementById('c');
+	
+	var canvas =cc=createCanvas(480,360);
+  cc.id=('c');
+   
 	var context = canvas.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
@@ -49,7 +53,7 @@ function draw(v,c,bc,w,h) {
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
 	// Start over!
-	//setTimeout(draw,20,v,c,bc,w,h);
+	setTimeout(draw,20,v,c,bc,w,h);
 }
 
 function mouseClicked() {
