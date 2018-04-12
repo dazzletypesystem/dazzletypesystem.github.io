@@ -1,10 +1,14 @@
 var cane;
+var img;
 
  function setup(){
-   var v = document.getElementById('ciao');
+   
    cane =createCanvas(480,360);
+   img = createImage(width,height);
   cane.id('c');
   cane.position(0,0);
+  
+  var v = document.getElementById('ciao');
   var can = document.getElementById('c');
   
   var context = can.getContext('2d');
@@ -50,11 +54,14 @@ function drawF(v,c,bc,w,h) {
 	idata.data = data;*/
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
+	image(img,0,0,200,200);
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
 }
 
 function mouseClicked() {
-  //var img = createImage();
-  saveCanvas(cane, 'myCanvas', 'jpg');
+  
+  img.copy(CoImg, 0, 0, width, height, 0, 0, width, height);
+  
+  //saveCanvas(cane, 'myCanvas', 'jpg');
 }
