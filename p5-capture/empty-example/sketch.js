@@ -66,11 +66,11 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   
-  img.copy(backcontext,0, 0, width, height, 0, 0, width, height);
+  img.copy(cane,0, 0, width, height, 0, 0, width, height);
 
   //saveCanvas(cane, 'myCanvas', 'jpg');
 }
 
 function touchEnded() {
-  img.copy(backcontext,0, 0, width, height, 0, 0, width, height);
+  img.copy(cane,0, 0, width, height, 0, 0, width, height);
 }
