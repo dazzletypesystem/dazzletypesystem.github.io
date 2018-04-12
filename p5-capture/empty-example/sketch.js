@@ -43,3 +43,7 @@ function draw(v,c,bc,w,h) {
 	// Start over!
 	setTimeout(draw,20,v,c,bc,w,h);
 }
+
+function mouseClicked() {
+  saveCanvas(canvas, 'myCanvas', 'jpg');
+}
