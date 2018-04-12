@@ -2,11 +2,11 @@
  
  function setup(){
    var v = document.getElementById('ciao');
-   var cane =createCanvas(480,360);
-  cane.id('c');
-  var can = document.getElementById('c');
+   canvas =createCanvas(480,360);
+   canvas.id('c');
+  //var can = document.getElementById('c');
   
-  var context = can.getContext('2d');
+  var context = canvas.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
  
