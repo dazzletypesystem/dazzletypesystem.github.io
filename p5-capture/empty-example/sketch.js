@@ -2,10 +2,10 @@
  
  function setup(){
    var v = document.getElementById('ciao');
-   	var canvas =createCanvas(480,360);
-  canvas.id=('c');
+   	var can =createCanvas(480,360);
+  can.id=('c');
   
-  var context = canvas.getContext('2d');
+  var context = can.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
  
@@ -14,8 +14,8 @@
 	v.addEventListener('play', function(){
 		cw = v.clientWidth;
 		ch = v.clientHeight;
-		canvas.width = cw;
-		canvas.height = ch;
+		can.width = cw;
+		can.height = ch;
 		back.width = cw;
 		back.height = ch;
 		drawF(v,context,backcontext,cw,ch);
@@ -54,5 +54,5 @@ function drawF(v,c,bc,w,h) {
 
 function mouseClicked() {
   //var img = createImage();
-  saveCanvas(canvas, 'myCanvas', 'jpg');
+  saveCanvas(can, 'myCanvas', 'jpg');
 }
