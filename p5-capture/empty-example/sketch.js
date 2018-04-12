@@ -2,8 +2,8 @@
  
  function setup(){
    var v = document.getElementById('ciao');
-   	/*var can =createCanvas(480,360);
-  can.id=('c');*/
+   var cane =createCanvas(480,360);
+  cane.id=('c');
   var can = document.getElementById('c');
   
   var context = can.getContext('2d');
