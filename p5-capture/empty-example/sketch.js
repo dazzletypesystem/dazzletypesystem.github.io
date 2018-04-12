@@ -1,17 +1,11 @@
  var canvas;
  
  function setup(){
+   var v = document.getElementById('ciao');
    	var canvas =createCanvas(480,360);
   canvas.id=('c');
-   
- }
-document.addEventListener('DOMContentLoaded', function(){
-	var v = document.getElementById('ciao');
-	//var canvas = document.getElementById('c');
-	
-
-   
-	var context = canvas.getContext('2d');
+  
+  var context = canvas.getContext('2d');
 	var back = document.createElement('canvas');
 	var backcontext = back.getContext('2d');
  
@@ -24,14 +18,17 @@ document.addEventListener('DOMContentLoaded', function(){
 		canvas.height = ch;
 		back.width = cw;
 		back.height = ch;
-		draw(v,context,backcontext,cw,ch);
-		
-		draw(v,context,backcontext,cw,ch);
+		drawF(v,context,backcontext,cw,ch);
 	},false);
+ }
  
+document.addEventListener('DOMContentLoaded', function(){
+	
+	//var canvas = document.getElementById('c');
+
 },false);
  
-function draw(v,c,bc,w,h) {
+function drawF(v,c,bc,w,h) {
 	if(v.paused || v.ended)	return false;
 	// First, draw it into the backing canvas
 	bc.drawImage(v,0,0,w,h);
