@@ -49,7 +49,7 @@ function draw(v,c,bc,w,h) {
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
 	// Start over!
-	setTimeout(draw,20,v,c,bc,w,h);
+	//setTimeout(draw,20,v,c,bc,w,h);
 }
 
 function mouseClicked() {
