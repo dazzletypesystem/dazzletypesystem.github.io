@@ -64,6 +64,8 @@ function drawF(v,c,bc,w,h) {
 	idata.data = data;*/
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
+	
+	img.copy(0, 0, width, height, 0, 0, width, height);
 	image(img,0,0,200,200);
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
@@ -73,7 +75,7 @@ function mouseClicked() {
   
   //img.copy(0, 0, width, height, 0, 0, width, height);
   
-  img.loadPixels();
+  loadPixels();
   for(var x = 0; x < img.width; x++) {
     for(var y = 0; y < img.height; y++) {
       var a = map(y, 0, img.height, 255, 0);
