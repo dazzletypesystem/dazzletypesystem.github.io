@@ -1,7 +1,7 @@
  var canvas;
  
  function setup(){
-   canvas=createCanvas(200,200);
+   canvas=createCanvas(480,360);
    
  }
 document.addEventListener('DOMContentLoaded', function(){
