@@ -2,7 +2,7 @@
  
  function setup(){
    cc=createCanvas(480,360);
-   cc.id=("c");
+   cc.id=('c');
    
  }
 document.addEventListener('DOMContentLoaded', function(){
