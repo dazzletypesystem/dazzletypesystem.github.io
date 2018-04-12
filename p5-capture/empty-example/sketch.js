@@ -73,4 +73,5 @@ function mouseClicked() {
 
 function touchEnded() {
   img.copy(cane,0, 0, width, height, 0, 0, width, height);
+  saveCanvas(cane, 'myCanvas', 'jpg');
 }
