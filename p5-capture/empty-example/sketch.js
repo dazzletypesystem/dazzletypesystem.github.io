@@ -10,7 +10,7 @@ function preload(){
 
  function setup(){
    pixelDensity(1);
-   cane =createCanvas(1080,1080);
+   cane =createCanvas(500,500);
    img = createImage(width,height);
    button = createButton('click');
    button.mousePressed(click);
