@@ -1,9 +1,13 @@
 var cane, can,back,backcontext,v;
-var img;
+var img, mask;
+
+function preload(){
+  mask = loadImage("assets/mask.jpg");  // Load the image
+}
 
  function setup(){
    pixelDensity(1);
-   cane =createCanvas(480*2,360*2);
+   cane =createCanvas(width,height);
    img = createImage(width,height);
    
    
@@ -59,7 +63,8 @@ function drawF(v,c,bc,w,h) {
 	c.putImageData(idata,0,0);
 	
 	//copy(0, 0, width, height, 0, 0, 100, 100);
-	image(img,0,0,200,200);
+	//image(img,0,0,200,200);
+	image(mask,0,0,width,height);
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
 }
