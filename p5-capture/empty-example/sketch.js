@@ -1,17 +1,20 @@
 var cane, can,back,backcontext,v;
-var img, mask;
+var img, mask, mask1;
+var button;
+var showMe=false;
 
 function preload(){
-  mask = loadImage("assets/mask.png");  // Load the image
+  mask = loadImage("assets/mask.png");
+  mask1 = loadImage("assets/mask1.png");
 }
 
  function setup(){
    pixelDensity(1);
    cane =createCanvas(1080,1080);
    img = createImage(width,height);
+   button = createButton('click');
+   button.mousePressed(click);
    
-   
-  
   cane.id('c');
   cane.position(0,0);
   
@@ -64,19 +67,27 @@ function drawF(v,c,bc,w,h) {
 	
 	//copy(0, 0, width, height, 0, 0, 100, 100);
 	//image(img,0,0,200,200);
-	image(mask,0,0,width,height);
+	if(showMe){
+	  image(img,0,0,width,height);
+	}
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
 }
 
-function mouseClicked() {
-  
+function click(){
   img.copy(cane,0, 0, width, height, 0, 0, width, height);
+  img.mask(img1);
+  showMe=true;
+}
+
+/*
+function mouseClicked() {
 
   //saveCanvas(cane, 'myCanvas', 'jpg');
 }
 
 function touchEnded() {
-  img.copy(cane,0, 0, width, height, 0, 0, width, height);
+ img.copy(cane,0, 0, width, height, 0, 0, width, height);
   saveCanvas(cane, 'myCanvas', 'jpg');
-}
+}*/
+
