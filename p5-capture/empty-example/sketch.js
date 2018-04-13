@@ -7,7 +7,7 @@ function preload(){
 
  function setup(){
    pixelDensity(1);
-   cane =createCanvas(width,height);
+   cane =createCanvas(500,500);
    img = createImage(width,height);
    
    
