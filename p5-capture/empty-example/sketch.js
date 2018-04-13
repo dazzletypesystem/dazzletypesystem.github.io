@@ -1,11 +1,11 @@
 var cane, can,back,backcontext,v;
 var img, mask, mask1;
-var button;
+var button, saveB;
 var showMe=false;
 
 function preload(){
   mask = loadImage("assets/mask.png");
-  mask1 = loadImage("assets/mask2.png");
+  mask1 = loadImage("assets/mask3.png");
 }
 
  function setup(){
@@ -15,6 +15,9 @@ function preload(){
    button = createButton('click');
    button.position(0,400);
    button.mousePressed(click);
+   
+   saveB.position(0,600);
+   saveB.mousePressed(savePict);
    
   cane.id('c');
   cane.position(0,0);
@@ -79,6 +82,10 @@ function click(){
   img.copy(cane,0, 0, width, height, 0, 0, width, height);
   img.mask(mask1);
   showMe=!showMe;
+}
+
+function savePict() {
+  saveCanvas(cane, 'myCanvas', 'jpg');
 }
 
 /*
