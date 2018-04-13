@@ -5,14 +5,15 @@ var showMe=false;
 
 function preload(){
   mask = loadImage("assets/mask.png");
-  mask1 = loadImage("assets/mask1.png");
+  mask1 = loadImage("assets/mask2.png");
 }
 
  function setup(){
    pixelDensity(1);
-   cane =createCanvas(500,500);
+   cane =createCanvas(480,360);
    img = createImage(width,height);
    button = createButton('click');
+   button.position(0,400);
    button.mousePressed(click);
    
   cane.id('c');
