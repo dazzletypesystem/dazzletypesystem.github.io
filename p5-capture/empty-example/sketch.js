@@ -2,7 +2,7 @@ var cane, can,back,backcontext,v;
 var img, mask;
 
 function preload(){
-  mask = loadImage("assets/mask.jpg");  // Load the image
+  mask = loadImage("assets/mask.png");  // Load the image
 }
 
  function setup(){
