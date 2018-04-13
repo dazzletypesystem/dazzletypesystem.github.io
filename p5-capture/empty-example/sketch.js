@@ -16,6 +16,7 @@ function preload(){
    button.position(0,400);
    button.mousePressed(click);
    
+   saveB = createButton('save');
    saveB.position(0,600);
    saveB.mousePressed(savePict);
    
