@@ -10,7 +10,7 @@ function preload(){
 
  function setup(){
    
-   cane =createCanvas(480,360);
+   cane =createCanvas(1280,720);
    pixelDensity(1);
    img = createImage(width,height);
    button = createButton('click');
