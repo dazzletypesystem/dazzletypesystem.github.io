@@ -77,7 +77,7 @@ function drawF(v,c,bc,w,h) {
 function click(){
   img.copy(cane,0, 0, width, height, 0, 0, width, height);
   img.mask(mask1);
-  showMe=true;
+  showMe=!showMe;
 }
 
 /*
