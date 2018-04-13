@@ -9,8 +9,9 @@ function preload(){
 }
 
  function setup(){
-   pixelDensity(1);
+   
    cane =createCanvas(480,360);
+   pixelDensity(1);
    img = createImage(width,height);
    button = createButton('click');
    button.position(0,400);
@@ -55,7 +56,7 @@ function drawF(v,c,bc,w,h) {
 	bc.drawImage(v,0,0,w,h);
 	// Grab the pixel data from the backing canvas
 	var idata = bc.getImageData(0,0,w,h);
-	/*var data = idata.data;
+	var data = idata.data;
 	// Loop through the pixels, turning them grayscale
 	for(var i = 0; i < data.length; i+=4) {
 		var r = data[i];
@@ -66,7 +67,7 @@ function drawF(v,c,bc,w,h) {
 		data[i+1] = brightness;
 		data[i+2] = brightness;
 	}
-	idata.data = data;*/
+	idata.data = data;
 	// Draw the pixels onto the visible canvas
 	c.putImageData(idata,0,0);
 	
