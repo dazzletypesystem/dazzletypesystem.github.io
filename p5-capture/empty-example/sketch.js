@@ -69,7 +69,7 @@ function drawF(v,c,bc,w,h) {
 	//copy(0, 0, width, height, 0, 0, 100, 100);
 	//image(img,0,0,200,200);
 	if(showMe){
-	  image(img,0,0,width,height);
+	  image(img,0,0,width,height,480,360);
 	}
 	// Start over!
 	setTimeout(drawF,20,v,c,bc,w,h);
